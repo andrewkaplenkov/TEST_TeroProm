@@ -91,7 +91,7 @@ def clean_text(text: str) -> str:
 @click.command(help="Определяет категорию товара по его идентификатору")
 @click.option("--product-id", required=True, type=int, help="Идентификатор искомого товара")
 @click.option("--score-threshold", type=int, default=80, help="Минимальный порог схожести для сопоставления (по умолчанию 80%)")
-def main(product_id: int, score_threshold) -> None:
+def main(product_id: int, score_threshold: int) -> None:
     match(product_id, score_threshold)
 
 if __name__ == "__main__":
